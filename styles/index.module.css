@@ -1,0 +1,8 @@
+.header__image {
+  height: 60vh;
+}
+.section__image {
+  display: block;
+  margin: auto;
+  height: 40vh;
+}

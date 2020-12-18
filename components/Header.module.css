@@ -1,0 +1,63 @@
+.header {
+  overflow: hidden;
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+  padding-bottom: 5rem;
+  background: #0cebeb;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #29ffc6,
+    #20e3b2,
+    #0cebeb
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #29ffc6,
+    #20e3b2,
+    #0cebeb
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.custom-shape-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 103px;
+}
+
+.custom-shape-divider .shape-fill {
+  fill: #ffffff;
+}
+
+.icon-down {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: transform 0.3s;
+}
+.icon-down:hover {
+  transform: translate(-50%, -10px);
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 0rem;
+  }
+}

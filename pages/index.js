@@ -1,65 +1,69 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+
+import Header from '../components/Header';
+import Section from '../components/Section';
+import styles from '../styles/index.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Flexámenes</title>
+        <meta
+          name="description"
+          content="Flexámenes es aprendizaje y evaluación de calidad. Nuestra misión: garantizar la calidad de los cursos online, ofreciendo sevicios para que los estudiantes puedan asistir a un examen presencial y validar su aprendizaje"
+        ></meta>
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <Header>
+        <div>
+          <h1>Flexámenes</h1>
+          <p>Formación online. Aprendizaje real.</p>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <img
+          className={styles.header__image}
+          src="/assets/learning-online.svg"
+          alt="A woman learning online"
+        />
+      </Header>
+      <Section>
+        <h3 id="introduction">
+          Una solución real <br /> para el aprendizaje del futuro
+        </h3>
+        <p>
+          La educación online ya no es cosa de mañana. Es un negocio
+          multimillonario que permite a millones de personas acceder a una
+          formación permanente de calidad.{' '}
+          <strong>Sin embargo, aún queda un gran reto para resolver.</strong>
+        </p>
+        <blockquote>
+          ¿Cómo <strong>garantizamos la calidad de los certificados?</strong>
+        </blockquote>
+        <p>
+          Necesitamos una solución flexible para{' '}
+          <strong>prevenir el fraude</strong> y asegurar que la evaluación es
+          segura y de calidad.
+        </p>
+        <h3>Y aquí es donde entramos nosotros</h3>
+        <p>
+          Ofrecemos servicios para que los estudiantes de cursos online puedan
+          asistir a exámenes presenciales. De esta forma, aseguramos la calidad
+          del proceso de evaluación.
+        </p>
+        <blockquote>
+          Nuestra misión: conseguir{' '}
+          <strong>
+            que la educación en línea tenga la misma calidad que el aprendizaje
+            presencial
+          </strong>
+          .
+        </blockquote>
+        <p>¿Estás con nosotros?</p>
+        <img
+          className={styles.section__image}
+          src="/assets/creativity.svg"
+          alt="A man who's just had an idea"
+        />
+      </Section>
     </div>
-  )
+  );
 }
